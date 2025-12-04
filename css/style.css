@@ -1,4 +1,4 @@
-/* ОСНОВНЫЕ СТИЛИ ДЛЯ "ПУЛЬС БОЖИЙ" */
+/* ОСНОВНЫЕ СТИЛИ */
 * {
     margin: 0;
     padding: 0;
@@ -6,21 +6,20 @@
 }
 
 html {
-    font-size: 18px;
-    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
-    position: relative;
-    overflow-x: hidden;
+    padding: 20px;
     min-height: 100vh;
 }
 
+/* Анимированный фон */
 .pulse-bg {
     position: fixed;
     top: 0;
@@ -29,29 +28,14 @@ body {
     height: 100%;
     z-index: -1;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .pulse-circle {
     position: absolute;
-    width: 300px;
-    height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(120, 200, 255, 0.1) 0%, rgba(120, 200, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(120, 200, 255, 0.1) 0%, transparent 70%);
     animation: pulse 8s infinite ease-in-out;
-}
-
-.pulse-circle:nth-child(2) {
-    background: radial-gradient(circle, rgba(255, 220, 120, 0.08) 0%, rgba(255, 220, 120, 0) 70%);
-    animation-delay: -2s;
-    width: 400px;
-    height: 400px;
-}
-
-.pulse-circle:nth-child(3) {
-    background: radial-gradient(circle, rgba(180, 255, 180, 0.05) 0%, rgba(180, 255, 180, 0) 70%);
-    animation-delay: -4s;
-    width: 250px;
-    height: 250px;
 }
 
 @keyframes pulse {
@@ -59,19 +43,24 @@ body {
     50% { opacity: 0.6; transform: scale(1.1); }
 }
 
+/* Контейнер */
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
 }
 
+/* Заголовки */
 .site-title {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     text-align: center;
-    margin: 2rem 0 0.5rem;
+    margin: 1rem 0 0.5rem;
     font-weight: 700;
     color: #222;
 }
@@ -84,15 +73,16 @@ body {
     text-align: center;
     font-size: 1.2rem;
     color: #666;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-style: italic;
 }
 
+/* Навигация */
 .chain-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 0 4rem;
+    margin: 2rem 0 3rem;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -113,27 +103,30 @@ body {
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .chain-link a:hover {
     background: #2a6eb6;
     color: white;
+    border-color: #2a6eb6;
 }
 
 .chain-dot {
-    width: 15px;
-    height: 15px;
-    margin: 0 10px;
+    width: 8px;
+    height: 8px;
+    margin: 0 15px;
     border-radius: 50%;
     background: #2a6eb6;
 }
 
+/* Цепная реакция */
 .chain-reaction {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 3rem 0;
+    margin: 2rem 0;
     gap: 15px;
 }
 
@@ -143,9 +136,14 @@ body {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border-top: 5px solid #2a6eb6;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.reaction-step:hover {
+    transform: translateY(-5px);
 }
 
 .step-number {
@@ -157,7 +155,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 0 auto 15px;
 }
@@ -169,11 +167,12 @@ body {
     padding: 0 10px;
 }
 
+/* Диаграмма */
 .effect-diagram {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .god-presence, .human-action, .eternal-change {
@@ -186,14 +185,17 @@ body {
     font-size: 1.1rem;
     margin: 10px 0;
     min-width: 250px;
+    box-shadow: 0 8px 20px rgba(42, 110, 182, 0.3);
 }
 
 .human-action {
     background: #36b536;
+    box-shadow: 0 8px 20px rgba(54, 181, 54, 0.3);
 }
 
 .eternal-change {
     background: #8a2be2;
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
 }
 
 .ripple-effect {
@@ -201,53 +203,70 @@ body {
     width: 150px;
     height: 150px;
     margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ripple-circle {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 50%;
     border: 2px solid #2a6eb6;
     opacity: 0.3;
+    animation: ripple 3s infinite;
 }
 
 .ripple-circle:nth-child(1) {
     width: 80px;
     height: 80px;
+    animation-delay: 0s;
 }
 
 .ripple-circle:nth-child(2) {
     width: 120px;
     height: 120px;
+    animation-delay: 1s;
 }
 
 .ripple-circle:nth-child(3) {
     width: 150px;
     height: 150px;
+    animation-delay: 2s;
+}
+
+@keyframes ripple {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0; }
 }
 
 .action-arrow {
     font-size: 2rem;
     color: #2a6eb6;
     margin: 10px 0;
+    font-weight: bold;
 }
 
+/* Цитата */
 .main-quote {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    padding: 20px;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    padding: 25px;
     margin: 2rem 0;
     background: #f8f9fa;
     border-left: 5px solid #ff9900;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
+.main-quote strong {
+    color: #2a6eb6;
+}
+
+/* Призыв к действию */
 .cta {
     text-align: center;
-    margin: 4rem 0 3rem;
+    margin: 3rem 0;
     padding: 30px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
@@ -270,20 +289,24 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(42, 110, 182, 0.3);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(42, 110, 182, 0.4);
 }
 
 .cta-button.secondary {
     background: #36b536;
+    box-shadow: 0 5px 15px rgba(54, 181, 54, 0.3);
 }
 
+/* Футер */
 .main-footer {
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding-top: 2rem;
     border-top: 2px solid #eee;
     text-align: center;
@@ -295,19 +318,23 @@ body {
     font-style: italic;
     color: #2a6eb6;
     margin: 1rem 0;
+    font-size: 1.1rem;
 }
 
-.small-note {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 1rem;
-}
-
+/* Адаптивность */
 @media (max-width: 768px) {
     .site-title { font-size: 2.5rem; }
+    .site-subtitle { font-size: 1rem; }
     .chain-nav { flex-direction: column; gap: 15px; }
+    .chain-dot { display: none; }
     .reaction-step { min-width: 100%; }
     .reaction-arrow { transform: rotate(90deg); padding: 10px 0; }
     .cta-buttons { flex-direction: column; align-items: center; }
-    .cta-button { width: 90%; }
+    .cta-button { width: 100%; text-align: center; }
+    .container { padding: 20px; }
+    .god-presence, .human-action, .eternal-change { 
+        min-width: 90%; 
+        font-size: 1rem; 
+        padding: 15px 20px; 
+    }
 }
