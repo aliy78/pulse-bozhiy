@@ -110,6 +110,7 @@ body {
     background: #2a6eb6;
     color: white;
     border-color: #2a6eb6;
+    transform: translateY(-2px);
 }
 
 .chain-dot {
