@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛИТУРГИЯ В МИРУ | ПУЛЬС БОЖИЙ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .liturgy-hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(42,110,182,0.08), rgba(138,43,226,0.08));
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+        
+        .eucharist-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 2rem 0;
+        }
+        
+        .flow-step {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 170px;
+            border-top: 5px solid;
+        }
+        
+        .flow-arrow {
+            font-size: 1.8rem;
+            color: #2a6eb6;
+            font-weight: bold;
+        }
+        
+        .body-of-christ {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+        
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin: 2rem 0;
+        }
+        
+        .member-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .sacrament-continuation {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+            margin: 2.5rem 0;
+        }
+        
+        .sacrament-item {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 15px;
+            border-left: 5px solid #2a6eb6;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+        
+        .radiation-map {
+            position: relative;
+            height: 350px;
+            margin: 2.5rem 0;
+            background: #f8f9fa;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px dashed rgba(42,110,182,0.2);
+        }
+        
+        .church-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 55px;
+            height: 55px;
+            background: #2a6eb6;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            z-index: 2;
+            box-shadow: 0 0 20px rgba(42,110,182,0.4);
+        }
+        
+        .radiation-line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: rgba(42,110,182,0.25);
+            transform-origin: left center;
+        }
+        
+        @media (max-width: 768px) {
+            .flow-arrow { transform: rotate(90deg); padding: 10px 0; }
+            .liturgy-hero { padding: 2rem 1rem; }
+            .radiation-map { height: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">ПУЛЬС <span class="divine">БОЖИЙ</span></a></h1>
+            <p class="site-subtitle">Когда Божья воля бьётся в человеческом сердце</p>
+            
+            <nav class="chain-nav">
+                <div class="chain-link">
+                    <a href="index.html">ГЛАВНАЯ</a>
+                    <div class="chain-dot"></div>
+                </div>
+                <div class="chain-link">
+                    <a href="volna.html">ВОЛНА</a>
+                    <div class="chain-dot"></div>
+                </div>
+                <div class="chain-link">
+                    <a href="dnevnik.html">ДНЕВНИК</a>
+                    <div class="chain-dot"></div>
+                </div>
+                <div class="chain-link">
+                    <a href="liturgia.html">ЛИТУРГИЯ</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="liturgy-hero">
+                <h1 style="color:#2a6eb6; font-size:2.5rem; margin-bottom:1rem;">ЛИТУРГИЯ В МИРУ</h1>
+                <p style="font-size:1.2rem; max-width:800px; margin:0 auto;">
+                    Когда Евхаристия не заканчивается на выходе из храма,<br>
+                    а <strong>продолжается в каждом причастнике</strong>, вышедшем в мир как живая частица Христа.
+                </p>
+            </section>
+
+            <section>
+                <h2>От алтаря — к миру</h2>
+                
+                <div class="eucharist-flow">
+                    <div class="flow-step" style="border-color:#2a6eb6;">
+                        <div style="font-size:2.2rem; margin-bottom:1rem;">✝️</div>
+                        <h3>АЛТАРЬ</h3>
+                        <p>Мы принимаем в себя Самого Христа в Причастии</p>
+                    </div>
+                    
+                    <div class="flow-arrow">→</div>
+                    
+                    <div class="flow-step" style="border-color:#36b536;">
+                        <div style="font-size:2.2rem; margin-bottom:1rem;">🔄</div>
+                        <h3>ПРЕВРАЩЕНИЕ</h3>
+                        <p>Становимся не просто "верующими", а <strong>членами Тела Христова</strong></p>
+                    </div>
+                    
+                    <div class="flow-arrow">→</div>
+                    
+                    <div class="flow-step" style="border-color:#ff9900;">
+                        <div style="font-size:2.2rem; margin-bottom:1rem;">🚶‍♂️</div>
+                        <h3>ВЫХОД</h3>
+                        <p>Выходим из храма <strong>как Христос, идущий в мир</strong></p>
+                    </div>
+                    
+                    <div class="flow-arrow">→</div>
+                    
+                    <div class="flow-step" style="border-color:#8a2be2;">
+                        <div style="font-size:2.2rem; margin-bottom:1rem;">🌍</div>
+                        <h3>ДЕЙСТВИЕ</h3>
+                        <p>Наши дела становятся <strong>продолжением дел Христа</strong></p>
+                    </div>
+                </div>
+                
+                <blockquote style="text-align:center; font-size:1.1rem; max-width:700px; margin:2rem auto;">
+                    «Мы не "причастились и ушли". Мы <strong>причастились и стали Христовыми</strong>, 
+                    чтобы нести Его присутствие туда, где Его ещё не узнали.»
+                </blockquote>
+            </section>
+
+            <section class="body-of-christ">
+                <h2>"Вы — тело Христово" (1 Кор. 12:27)</h2>
+                <p style="max-width:800px; margin:1rem auto;">Это не метафора. Это <strong>онтологическая реальность</strong>. В Таинстве Евхаристии мы реально соединяемся со Христом и друг с другом, становясь единым организмом.</p>
+                
+                <div class="members-grid">
+                    <div class="member-card">
+                        <h4 style="color:#2a6eb6;">РУКА</h4>
+                        <p>Тот, кто помогает, работает, поддерживает</p>
+                        <p style="color:#666; font-style:italic; margin-top:0.5rem;">"Помог донести сумки"</p>
+                    </div>
+                    
+                    <div class="member-card">
+                        <h4 style="color:#2a6eb6;">СЕРДЦЕ</h4>
+                        <p>Тот, кто любит, сострадает, утешает</p>
+                        <p style="color:#666; font-style:italic; margin-top:0.5rem;">"Выслушал, улыбнулся, обнял"</p>
+                    </div>
+                    
+                    <div class="member-card">
+                        <h4 style="color:#2a6eb6;">УСТА</h4>
+                        <p>Тот, кто говорит слово надежды, молится</p>
+                        <p style="color:#666; font-style:italic; margin-top:0.5rem;">"Сказал доброе слово, помолился"</p>
+                    </div>
+                    
+                    <div class="member-card">
+                        <h4 style="color:#2a6eb6;">НОГИ</h4>
+                        <p>Тот, кто идёт к нуждающимся, спешит на помощь</p>
+                        <p style="color:#666; font-style:italic; margin-top:0.5rem;">"Пришёл вовремя, откликнулся"</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Малые дела как продолжение Таинств</h2>
+                
+                <div class="sacrament-continuation">
+                    <div class="sacrament-item">
+                        <h3 style="color:#2a6eb6;">УЛЫБКА = Причастие любви</h3>
+                        <p>Как в Евхаристии мы принимаем Любовь воплощённую, так улыбкой делимся этой Любовью с другими.</p>
+                    </div>
+                    
+                    <div class="sacrament-item">
+                        <h3 style="color:#2a6eb6;">ПОМОЩЬ = Причастие милосердия</h3>
+                        <p>Как Христос преломляет Себя для нас, так мы "преломляем" своё время, силы для ближнего.</p>
+                    </div>
+                    
+                    <div class="sacrament-item">
+                        <h3 style="color:#2a6eb6;">ТЕРПЕНИЕ = Причастие креста</h3>
+                        <p>Как мы соединяемся со страданиями Христа в Чаше, так в терпении соединяемся с Ним в ежедневных крестах.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 style="text-align:center;">Карта излучения: от храма в мир</h2>
+                
+                <div class="radiation-map" id="radiationMap">
+                    <div class="church-center">ХРАМ</div>
+                    <!-- Лучи будут добавлены через JavaScript -->
+                </div>
+                
+                <div style="text-align:center; margin-top:1.5rem;">
+                    <p><strong>Каждая точка — причастник.</strong> Каждый луч — его путь в мир. Вместе они образуют сияющую сеть Божественного присутствия.</p>
+                </div>
+            </section>
+
+            <section style="text-align:center; margin:3rem 0; padding:2.5rem; background:#f0f8ff; border-radius:20px;">
+                <h2>Литургия после Литургии</h2>
+                <p style="font-size:1.1rem; max-width:700px; margin:1rem auto;">
+                    Когда мы это понимаем, <strong>вся жизнь становится продолжением Евхаристии</strong>.<br>
+                    Каждое дело — освящённым. Каждая встреча — благодатной.<br>
+                    Мы не "ходим в церковь". Мы <strong>являем Церковь</strong> — Тело Христово — в мире.
+                </p>
+                
+                <div style="margin-top:2rem;">
+                    <a href="index.html" class="cta-button" style="background:#666; margin-right:15px;">← К ГЛАВНОЙ</a>
+                    <a href="dnevnik.html" class="cta-button">ПРАКТИКА СЕГОДНЯ →</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>Проект «ПУЛЬС БОЖИЙ». 2024.</p>
+            <p class="scripture">«Ибо мы соработники у Бога» (1 Кор. 3:9)</p>
+            <p style="font-size:0.9rem; color:#888; margin-top:1rem;">
+                Заключительная страница: Литургия как жизнь
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Создание лучей от храма
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = document.getElementById('radiationMap');
+            if (!map) return;
+            
+            const rays = 20;
+            const centerX = map.offsetWidth / 2;
+            const centerY = map.offsetHeight / 2;
+            
+            for (let i = 0; i < rays; i++) {
+                const ray = document.createElement('div');
+                ray.className = 'radiation-line';
+                
+                const angle = (i * (360 / rays));
+                const length = 250 + Math.random() * 80;
+                
+                ray.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+                ray.style.width = `${length}px`;
+                
+                ray.animate([
+                    { width: '0px', opacity: 0 },
+                    { width: `${length}px`, opacity: 0.4 }
+                ], {
+                    duration: 1800,
+                    delay: i * 80,
+                    easing: 'ease-out',
+                    fill: 'forwards'
+                });
+                
+                map.appendChild(ray);
+            }
+            
+            // Добавляем точки (причастники)
+            for (let i = 0; i < 12; i++) {
+                const member = document.createElement('div');
+                member.style.position = 'absolute';
+                member.style.width = '10px';
+                member.style.height = '10px';
+                member.style.background = '#2a6eb6';
+                member.style.borderRadius = '50%';
+                member.style.opacity = '0.7';
+                
+                const angle = Math.random() * 360;
+                const distance = 80 + Math.random() * 200;
+                const rad = angle * Math.PI / 180;
+                
+                member.style.left = `calc(50% + ${Math.cos(rad) * distance}px)`;
+                member.style.top = `calc(50% + ${Math.sin(rad) * distance}px)`;
+                member.style.transform = 'translate(-50%, -50%)';
+                
+                member.animate([
+                    { transform: 'translate(-50%, -50%) scale(1)', opacity: 0.5 },
+                    { transform: 'translate(-50%, -50%) scale(1.4)', opacity: 0.9 },
+                    { transform: 'translate(-50%, -50%) scale(1)', opacity: 0.5 }
+                ], {
+                    duration: 2200 + Math.random() * 1800,
+                    iterations: Infinity,
+                    delay: Math.random() * 1500
+                });
+                
+                map.appendChild(member);
+            }
+        });
+    </script>
+</body>
+</html>
